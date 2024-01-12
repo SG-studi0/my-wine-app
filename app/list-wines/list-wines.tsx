@@ -1,12 +1,16 @@
-import React from 'react';
+import React from "react";
+import { sql } from "@vercel/postgres";
 
-const ListWines = () => {
+export default async function ListWines({}: {}): Promise<JSX.Element> {
+  const { rows } = await sql`SELECT * from wine`;
+
   return (
     <div>
-      <h1>About Page</h1>
-      <p>This is the About page content.</p>
+      {rows.map((row) => (
+        <div key={row.id}>
+          {row.id} - {row.Name}
+        </div>
+      ))}
     </div>
   );
-};
-
-export default ListWines;
+}

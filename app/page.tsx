@@ -7,13 +7,18 @@ export default function Home() {
     <main>
       <div className="flex justify-center items-center h-screen">
         <form className=" p-8 rounded-lg shadow-md">
+          <h1 className="text-4xl font-bold text-center text-white mb-4">
+            My Wine
+          </h1>
+          <hr />
           <h2 className=" flex justify-center items-center text-2xl font-semibold mb-4">
             Login
           </h2>
+          <h2 />
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-600"
+              className="block text-sm font-medium text-white-600"
             >
               Email:
             </label>
@@ -27,7 +32,7 @@ export default function Home() {
           <div className="mb-4">
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-600"
+              className="block text-sm font-medium text-white-600"
             >
               Password:
             </label>
@@ -39,15 +44,18 @@ export default function Home() {
             />
           </div>
           <div className="mb-6">
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600"
-            >
-              Log in
-            </button>
+            <Link href="/">
+              <button
+                type="submit"
+                className="w-full bg-sky-500 text-white p-3 rounded-md hover:bg-sky-600"
+              >
+                Log in
+              </button>
+            </Link>
             <div>
               <Link href="/list-wines/list-wines">list of wines</Link>
-              <Link href="pages/about">Go to About Page</Link>
+              <hr />
+              <Link href=".next/server/app/one/two">Test Page</Link>
             </div>
           </div>
         </form>
