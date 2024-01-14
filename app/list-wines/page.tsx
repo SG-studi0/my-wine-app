@@ -1,7 +1,7 @@
 import { sql } from "@vercel/postgres";
 import { NextResponse } from 'next/server';
 
-export default async function getWines(request: Request) {
+export default async function GET(request: Request) {
   try {
     const wines = await sql`SELECT * from wine;`;
     console.log(JSON.stringify(wines ,null,2));
