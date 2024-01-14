@@ -44,7 +44,7 @@ export default function Home() {
             />
           </div>
           <div className="mb-6">
-            <Link href="/">
+            <Link href="/add-wine">
               <button
                 type="submit"
                 className="w-full bg-sky-500 text-white p-3 rounded-md hover:bg-sky-600"
@@ -53,9 +53,8 @@ export default function Home() {
               </button>
             </Link>
             <div>
-              <Link href="/list-wines/list-wines">list of wines</Link>
+              <Link href="/list-wines">Test list of wines</Link>
               <hr />
-              <Link href=".next/server/app/one/two">Test Page</Link>
             </div>
           </div>
         </form>
